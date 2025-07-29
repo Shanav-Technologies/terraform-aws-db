@@ -1,0 +1,113 @@
+{
+    "DBInstance": {
+        "DBInstanceIdentifier": "test22-mariadb-mariadb",
+        "DBInstanceClass": "db.t4g.micro",
+        "Engine": "mariadb",
+        "DBInstanceStatus": "deleting",
+        "MasterUsername": "user",
+        "DBName": "test",
+        "Endpoint": {
+            "Address": "test22-mariadb-mariadb.czcm280osa3e.ca-central-1.rds.amazonaws.com",
+            "Port": 3306,
+            "HostedZoneId": "Z1JG78A3UK1DU3"
+        },
+        "AllocatedStorage": 16,
+        "InstanceCreateTime": "2025-07-28T08:03:25.267000+00:00",
+        "PreferredBackupWindow": "03:00-06:00",
+        "BackupRetentionPeriod": 0,
+        "DBSecurityGroups": [],
+        "VpcSecurityGroups": [
+            {
+                "VpcSecurityGroupId": "sg-07ca64c3ebf427c03",
+                "Status": "active"
+            }
+        ],
+        "DBParameterGroups": [
+            {
+                "DBParameterGroupName": "test22-mariadb",
+                "ParameterApplyStatus": "in-sync"
+            }
+        ],
+        "AvailabilityZone": "ca-central-1a",
+        "DBSubnetGroup": {
+            "DBSubnetGroupName": "test22-mariadb",
+            "DBSubnetGroupDescription": "mariadb option group",
+            "VpcId": "vpc-0c88a51d27ed1a845",
+            "SubnetGroupStatus": "Complete",
+            "Subnets": [
+                {
+                    "SubnetIdentifier": "subnet-006df6f7ff905bfd8",
+                    "SubnetAvailabilityZone": {
+                        "Name": "ca-central-1b"
+                    },
+                    "SubnetOutpost": {},
+                    "SubnetStatus": "Active"
+                },
+                {
+                    "SubnetIdentifier": "subnet-073cfbec032b9699c",
+                    "SubnetAvailabilityZone": {
+                        "Name": "ca-central-1a"
+                    },
+                    "SubnetOutpost": {},
+                    "SubnetStatus": "Active"
+                }
+            ]
+        },
+        "PreferredMaintenanceWindow": "mon:00:00-mon:03:00",
+        "PendingModifiedValues": {},
+        "MultiAZ": false,
+        "EngineVersion": "11.4.5",
+        "AutoMinorVersionUpgrade": true,
+        "ReadReplicaDBInstanceIdentifiers": [],
+        "LicenseModel": "general-public-license",
+        "OptionGroupMemberships": [
+            {
+                "OptionGroupName": "test22-mariadb",
+                "Status": "in-sync"
+            }
+        ],
+        "PubliclyAccessible": true,
+        "StorageType": "gp2",
+        "DbInstancePort": 0,
+        "StorageEncrypted": true,
+        "KmsKeyId": "arn:aws:kms:ca-central-1:779846798556:key/eb67ab97-2b8b-4d04-97a1-b403ef1949c9",
+        "DbiResourceId": "db-NEYFUAWFTS7QLMVFLSQWOT4RHI",
+        "CACertificateIdentifier": "",
+        "DomainMemberships": [],
+        "CopyTagsToSnapshot": true,
+        "MonitoringInterval": 0,
+        "DBInstanceArn": "arn:aws:rds:ca-central-1:779846798556:db:test22-mariadb-mariadb",
+        "IAMDatabaseAuthenticationEnabled": true,
+        "DatabaseInsightsMode": "standard",
+        "PerformanceInsightsEnabled": false,
+        "EnabledCloudwatchLogsExports": [
+            "audit",
+            "general"
+        ],
+        "DeletionProtection": false,
+        "AssociatedRoles": [],
+        "TagList": [
+            {
+                "Key": "Environment",
+                "Value": "test22"
+            },
+            {
+                "Key": "Repository",
+                "Value": "https://github.com/shanav-tech/terraform-aws-db"
+            },
+            {
+                "Key": "Managedby",
+                "Value": "info@shanav-tech.com"
+            },
+            {
+                "Key": "Name",
+                "Value": "test22-mariadb"
+            }
+        ],
+        "CustomerOwnedIpEnabled": false,
+        "BackupTarget": "region",
+        "NetworkType": "IPV4",
+        "StorageThroughput": 0,
+        "DedicatedLogVolume": false
+    }
+}

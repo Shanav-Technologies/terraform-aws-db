@@ -1,0 +1,2378 @@
+{
+  "version": 4,
+  "terraform_version": "1.12.2",
+  "serial": 50,
+  "lineage": "401df8d3-2669-4ce6-53c7-7693e016cfd2",
+  "outputs": {
+    "db_instance_arn": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_availability_zone": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_ca_cert_identifier": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_cloudwatch_log_groups": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "db_instance_endpoint": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_engine": {
+      "value": "mariadb",
+      "type": "string"
+    },
+    "db_instance_id": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_name": {
+      "value": "test",
+      "type": "string"
+    },
+    "db_instance_port": {
+      "value": 3306,
+      "type": "number"
+    },
+    "db_instance_resource_id": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_status": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_instance_username": {
+      "value": "user",
+      "type": "string"
+    },
+    "db_parameter_group_arn": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "db_parameter_group_id": {
+      "value": "test22-mariadb",
+      "type": "string"
+    },
+    "db_subnet_group_id": {
+      "value": "test22-mariadb",
+      "type": "string"
+    },
+    "db_subnet_group_name": {
+      "value": "test22-mariadb",
+      "type": "string"
+    },
+    "igw_id": {
+      "value": "igw-0bd854bd2d64cff69",
+      "type": "string"
+    },
+    "ipv6_cidr_block": {
+      "value": "2600:1f11:64c:6400::/56",
+      "type": "string"
+    },
+    "kms_key_arn": {
+      "value": "arn:aws:kms:ca-central-1:779846798556:key/d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+      "type": "string"
+    },
+    "kms_key_id": {
+      "value": "d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+      "type": "string"
+    },
+    "kms_key_multi_region": {
+      "value": false,
+      "type": "bool"
+    },
+    "kms_key_policy": {
+      "value": "{\"Statement\":[{\"Action\":\"kms:*\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::779846798556:root\"},\"Resource\":\"*\",\"Sid\":\"Enable IAM User Permissions\"}],\"Version\":\"2012-10-17\"}",
+      "type": "string"
+    },
+    "kms_key_rotation_enabled": {
+      "value": true,
+      "type": "bool"
+    },
+    "ssm_parameter_arn": {
+      "value": null,
+      "type": "dynamic"
+    },
+    "ssm_parameter_name": {
+      "value": "/test22/mariadb/endpoint",
+      "type": "string"
+    },
+    "vpc_cidr_block": {
+      "value": "10.0.0.0/16",
+      "type": "string"
+    },
+    "vpc_id": {
+      "value": "vpc-05f04e5d0ce7f8a23",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "module": "module.mariadb",
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "779846798556",
+            "arn": "arn:aws:iam::779846798556:user/OpsStation1",
+            "id": "779846798556",
+            "user_id": "AIDA3LET5ZTOAEWBH5W4I"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "3647760808",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"Enable IAM User Permissions\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"kms:*\",\n      \"Resource\": \"*\",\n      \"Principal\": {\n        \"AWS\": \"arn:aws:iam::779846798556:root\"\n      }\n    }\n  ]\n}",
+            "minified_json": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"Enable IAM User Permissions\",\"Effect\":\"Allow\",\"Action\":\"kms:*\",\"Resource\":\"*\",\"Principal\":{\"AWS\":\"arn:aws:iam::779846798556:root\"}}]}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "kms:*"
+                ],
+                "condition": [],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [
+                  {
+                    "identifiers": [
+                      "arn:aws:iam::779846798556:root"
+                    ],
+                    "type": "AWS"
+                  }
+                ],
+                "resources": [
+                  "*"
+                ],
+                "sid": "Enable IAM User Permissions"
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "enhanced_monitoring",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "76086537",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"monitoring.rds.amazonaws.com\"\n      }\n    }\n  ]\n}",
+            "minified_json": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"sts:AssumeRole\",\"Principal\":{\"Service\":\"monitoring.rds.amazonaws.com\"}}]}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "sts:AssumeRole"
+                ],
+                "condition": [],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [
+                  {
+                    "identifiers": [
+                      "monitoring.rds.amazonaws.com"
+                    ],
+                    "type": "Service"
+                  }
+                ],
+                "resources": [],
+                "sid": ""
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "data",
+      "type": "aws_partition",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "dns_suffix": "amazonaws.com",
+            "id": "aws",
+            "partition": "aws",
+            "reverse_dns_prefix": "com.amazonaws"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_cloudwatch_log_group",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "read",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_db_option_group",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:rds:ca-central-1:779846798556:og:test22-mariadb",
+            "engine_name": "mariadb",
+            "id": "test22-mariadb",
+            "major_engine_version": "10.11",
+            "name": "test22-mariadb",
+            "name_prefix": "",
+            "option": [],
+            "option_group_description": "mariadb option group",
+            "region": "ca-central-1",
+            "skip_destroy": false,
+            "tags": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb-option-group",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "tags_all": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb-option-group",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjo5MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjAifQ==",
+          "create_before_destroy": true
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_db_parameter_group",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:rds:ca-central-1:779846798556:pg:test22-mariadb",
+            "description": "mariadb option group",
+            "family": "mariadb10.11",
+            "id": "test22-mariadb",
+            "name": "test22-mariadb",
+            "name_prefix": "",
+            "parameter": [],
+            "region": "ca-central-1",
+            "skip_destroy": false,
+            "tags": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb-parameter",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "tags_all": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb-parameter",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ==",
+          "create_before_destroy": true
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_db_subnet_group",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:rds:ca-central-1:779846798556:subgrp:test22-mariadb",
+            "description": "mariadb option group",
+            "id": "test22-mariadb",
+            "name": "test22-mariadb",
+            "name_prefix": "",
+            "region": "ca-central-1",
+            "subnet_ids": [
+              "subnet-01f40ce935f061b4a",
+              "subnet-0d5efbcd7e4d8e941"
+            ],
+            "supported_network_types": [
+              "IPV4"
+            ],
+            "tags": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "tags_all": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "enhanced_monitoring",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_iam_role_policy",
+      "name": "inline_policies",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "enhanced_monitoring",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "managed_policies",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_kms_alias",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:kms:ca-central-1:779846798556:alias/rds",
+            "id": "alias/rds",
+            "name": "alias/rds",
+            "name_prefix": "",
+            "region": "ca-central-1",
+            "target_key_arn": "arn:aws:kms:ca-central-1:779846798556:key/d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+            "target_key_id": "d39fdf96-2d45-4cd8-9754-8a777f7b752b"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.mariadb.aws_kms_key.default",
+            "module.mariadb.data.aws_caller_identity.current",
+            "module.mariadb.data.aws_iam_policy_document.default",
+            "module.mariadb.data.aws_partition.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_kms_key",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:kms:ca-central-1:779846798556:key/d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+            "bypass_policy_lockout_safety_check": false,
+            "custom_key_store_id": "",
+            "customer_master_key_spec": "SYMMETRIC_DEFAULT",
+            "deletion_window_in_days": 7,
+            "description": "Parameter Store KMS master key",
+            "enable_key_rotation": true,
+            "id": "d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+            "is_enabled": true,
+            "key_id": "d39fdf96-2d45-4cd8-9754-8a777f7b752b",
+            "key_usage": "ENCRYPT_DECRYPT",
+            "multi_region": false,
+            "policy": "{\"Statement\":[{\"Action\":\"kms:*\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::779846798556:root\"},\"Resource\":\"*\",\"Sid\":\"Enable IAM User Permissions\"}],\"Version\":\"2012-10-17\"}",
+            "region": "ca-central-1",
+            "rotation_period_in_days": 365,
+            "tags": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "tags_all": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "timeouts": null,
+            "xks_key_id": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "customer_master_key_spec"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "key_usage"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "module.mariadb.data.aws_caller_identity.current",
+            "module.mariadb.data.aws_iam_policy_document.default",
+            "module.mariadb.data.aws_partition.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_security_group",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:security-group/sg-0e3fb804079ebf731",
+            "description": "Instance default security group (only egress access is allowed).",
+            "egress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "Description of the rule.",
+                "from_port": 0,
+                "ipv6_cidr_blocks": [
+                  "::/0"
+                ],
+                "prefix_list_ids": [],
+                "protocol": "-1",
+                "security_groups": [],
+                "self": false,
+                "to_port": 0
+              }
+            ],
+            "id": "sg-0e3fb804079ebf731",
+            "ingress": [
+              {
+                "cidr_blocks": [
+                  "10.0.0.0/16"
+                ],
+                "description": "Description of the ingress rule use elasticache.",
+                "from_port": 3306,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 3306
+              }
+            ],
+            "name": "test22-mariadb-sg-MariaDB",
+            "name_prefix": "",
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "revoke_rules_on_delete": false,
+            "tags": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "tags_all": {
+              "Environment": "test22",
+              "Managedby": "info@Shanav-Technologies.com",
+              "Name": "test22-mariadb",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-db"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ],
+          "create_before_destroy": true
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "egress",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "0.0.0.0/0"
+            ],
+            "description": "Description of the rule.",
+            "from_port": 0,
+            "id": "sgrule-3011375448",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "security_group_id": "sg-0e3fb804079ebf731",
+            "security_group_rule_id": "sgr-0f7f4ec7f99034b87",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 0,
+            "type": "egress"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "module.mariadb.aws_security_group.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "egress_ipv6",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": null,
+            "description": "Description of the rule.",
+            "from_port": 0,
+            "id": "sgrule-1091199102",
+            "ipv6_cidr_blocks": [
+              "::/0"
+            ],
+            "prefix_list_ids": null,
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "security_group_id": "sg-0e3fb804079ebf731",
+            "security_group_rule_id": "sgr-001bdbb9ed35c58c1",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 0,
+            "type": "egress"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "module.mariadb.aws_security_group.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "aws_security_group_rule",
+      "name": "ingress",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 2,
+          "attributes": {
+            "cidr_blocks": [
+              "10.0.0.0/16"
+            ],
+            "description": "Description of the ingress rule use elasticache.",
+            "from_port": 3306,
+            "id": "sgrule-924346783",
+            "ipv6_cidr_blocks": null,
+            "prefix_list_ids": null,
+            "protocol": "tcp",
+            "region": "ca-central-1",
+            "security_group_id": "sg-0e3fb804079ebf731",
+            "security_group_rule_id": "sgr-0cdcc36bbf3351c13",
+            "self": false,
+            "source_security_group_id": null,
+            "timeouts": null,
+            "to_port": 3306,
+            "type": "ingress"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "module.mariadb.aws_security_group.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "random_id",
+      "name": "password",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "b64_std": "gYc+TVMwrzaMbUt6orsfzviP99c=",
+            "b64_url": "gYc-TVMwrzaMbUt6orsfzviP99c",
+            "byte_length": 20,
+            "dec": "739475837312125662440555794283186116541480433623",
+            "hex": "81873e4d5330af368c6d4b7aa2bb1fcef88ff7d7",
+            "id": "gYc-TVMwrzaMbUt6orsfzviP99c",
+            "keepers": null,
+            "prefix": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.mariadb",
+      "mode": "managed",
+      "type": "random_id",
+      "name": "snapshot_identifier",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_eip",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_flow_log",
+      "name": "private_subnet_flow_log",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_flow_log",
+      "name": "public_subnet_flow_log",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:network-acl/acl-011b02c4db40193e9",
+            "egress": [
+              {
+                "action": "deny",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "id": "acl-011b02c4db40193e9",
+            "ingress": [
+              {
+                "action": "deny",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "subnet_ids": [
+              "subnet-01685d12bb8a549c9",
+              "subnet-035307efa700f3732"
+            ],
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_subnet.private",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:network-acl/acl-06f37fcbabcd9e783",
+            "egress": [
+              {
+                "action": "allow",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "id": "acl-06f37fcbabcd9e783",
+            "ingress": [
+              {
+                "action": "allow",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "subnet_ids": [
+              "subnet-01f40ce935f061b4a",
+              "subnet-0d5efbcd7e4d8e941"
+            ],
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl_rule",
+      "name": "private_inbound",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "cidr_block": "0.0.0.0/0",
+            "egress": false,
+            "from_port": 0,
+            "icmp_code": null,
+            "icmp_type": null,
+            "id": "nacl-2952914351",
+            "ipv6_cidr_block": "",
+            "network_acl_id": "acl-011b02c4db40193e9",
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "rule_action": "deny",
+            "rule_number": 100,
+            "to_port": 0
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_network_acl.private",
+            "module.private_subnets.aws_subnet.private",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl_rule",
+      "name": "private_outbound",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "cidr_block": "0.0.0.0/0",
+            "egress": true,
+            "from_port": 0,
+            "icmp_code": null,
+            "icmp_type": null,
+            "id": "nacl-3507490245",
+            "ipv6_cidr_block": "",
+            "network_acl_id": "acl-011b02c4db40193e9",
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "rule_action": "deny",
+            "rule_number": 100,
+            "to_port": 0
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_network_acl.private",
+            "module.private_subnets.aws_subnet.private",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl_rule",
+      "name": "public_inbound",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "cidr_block": "0.0.0.0/0",
+            "egress": false,
+            "from_port": 0,
+            "icmp_code": null,
+            "icmp_type": null,
+            "id": "nacl-2375437525",
+            "ipv6_cidr_block": "",
+            "network_acl_id": "acl-06f37fcbabcd9e783",
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "rule_action": "allow",
+            "rule_number": 100,
+            "to_port": 0
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_network_acl.public",
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_network_acl_rule",
+      "name": "public_outbound",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "cidr_block": "0.0.0.0/0",
+            "egress": true,
+            "from_port": 0,
+            "icmp_code": null,
+            "icmp_type": null,
+            "id": "nacl-2653724832",
+            "ipv6_cidr_block": "",
+            "network_acl_id": "acl-06f37fcbabcd9e783",
+            "protocol": "-1",
+            "region": "ca-central-1",
+            "rule_action": "allow",
+            "rule_number": 100,
+            "to_port": 0
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.private_subnets.aws_network_acl.public",
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route",
+      "name": "nat_gateway",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "carrier_gateway_id": "",
+            "core_network_arn": "",
+            "destination_cidr_block": "0.0.0.0/0",
+            "destination_ipv6_cidr_block": "",
+            "destination_prefix_list_id": "",
+            "egress_only_gateway_id": "",
+            "gateway_id": "igw-0bd854bd2d64cff69",
+            "id": "r-rtb-08da6354908fb4d8a1080289494",
+            "instance_id": "",
+            "instance_owner_id": "",
+            "local_gateway_id": "",
+            "nat_gateway_id": "",
+            "network_interface_id": "",
+            "origin": "CreateRoute",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-08da6354908fb4d8a",
+            "state": "active",
+            "timeouts": {
+              "create": "5m",
+              "delete": null,
+              "update": null
+            },
+            "transit_gateway_id": "",
+            "vpc_endpoint_id": "",
+            "vpc_peering_connection_id": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "gateway_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.vpc.aws_internet_gateway.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "carrier_gateway_id": "",
+            "core_network_arn": "",
+            "destination_cidr_block": "0.0.0.0/0",
+            "destination_ipv6_cidr_block": "",
+            "destination_prefix_list_id": "",
+            "egress_only_gateway_id": "",
+            "gateway_id": "igw-0bd854bd2d64cff69",
+            "id": "r-rtb-0aa212a30b62e29521080289494",
+            "instance_id": "",
+            "instance_owner_id": "",
+            "local_gateway_id": "",
+            "nat_gateway_id": "",
+            "network_interface_id": "",
+            "origin": "CreateRoute",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-0aa212a30b62e2952",
+            "state": "active",
+            "timeouts": {
+              "create": "5m",
+              "delete": null,
+              "update": null
+            },
+            "transit_gateway_id": "",
+            "vpc_endpoint_id": "",
+            "vpc_peering_connection_id": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "gateway_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.vpc.aws_internet_gateway.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route",
+      "name": "public_ipv6",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "carrier_gateway_id": "",
+            "core_network_arn": "",
+            "destination_cidr_block": "",
+            "destination_ipv6_cidr_block": "::/0",
+            "destination_prefix_list_id": "",
+            "egress_only_gateway_id": "",
+            "gateway_id": "igw-0bd854bd2d64cff69",
+            "id": "r-rtb-08da6354908fb4d8a2750132062",
+            "instance_id": "",
+            "instance_owner_id": "",
+            "local_gateway_id": "",
+            "nat_gateway_id": "",
+            "network_interface_id": "",
+            "origin": "CreateRoute",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-08da6354908fb4d8a",
+            "state": "active",
+            "timeouts": null,
+            "transit_gateway_id": "",
+            "vpc_endpoint_id": "",
+            "vpc_peering_connection_id": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "gateway_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.vpc.aws_internet_gateway.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "carrier_gateway_id": "",
+            "core_network_arn": "",
+            "destination_cidr_block": "",
+            "destination_ipv6_cidr_block": "::/0",
+            "destination_prefix_list_id": "",
+            "egress_only_gateway_id": "",
+            "gateway_id": "igw-0bd854bd2d64cff69",
+            "id": "r-rtb-0aa212a30b62e29522750132062",
+            "instance_id": "",
+            "instance_owner_id": "",
+            "local_gateway_id": "",
+            "nat_gateway_id": "",
+            "network_interface_id": "",
+            "origin": "CreateRoute",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-0aa212a30b62e2952",
+            "state": "active",
+            "timeouts": null,
+            "transit_gateway_id": "",
+            "vpc_endpoint_id": "",
+            "vpc_peering_connection_id": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "gateway_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.vpc.aws_internet_gateway.default",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:route-table/rtb-00a64d529d8e602fb",
+            "id": "rtb-00a64d529d8e602fb",
+            "owner_id": "779846798556",
+            "propagating_vgws": [],
+            "region": "ca-central-1",
+            "route": [],
+            "tags": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1a-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1a-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:route-table/rtb-08e21a8047ec2656e",
+            "id": "rtb-08e21a8047ec2656e",
+            "owner_id": "779846798556",
+            "propagating_vgws": [],
+            "region": "ca-central-1",
+            "route": [],
+            "tags": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1b-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1b-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:route-table/rtb-08da6354908fb4d8a",
+            "id": "rtb-08da6354908fb4d8a",
+            "owner_id": "779846798556",
+            "propagating_vgws": [],
+            "region": "ca-central-1",
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0bd854bd2d64cff69",
+                "ipv6_cidr_block": "::/0",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0bd854bd2d64cff69",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1a-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1a-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:route-table/rtb-0aa212a30b62e2952",
+            "id": "rtb-0aa212a30b62e2952",
+            "owner_id": "779846798556",
+            "propagating_vgws": [],
+            "region": "ca-central-1",
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0bd854bd2d64cff69",
+                "ipv6_cidr_block": "::/0",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              },
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0bd854bd2d64cff69",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1b-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1b-rt",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-03f541833569a2dcf",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-00a64d529d8e602fb",
+            "subnet_id": "subnet-01685d12bb8a549c9",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.private",
+            "module.private_subnets.aws_subnet.private",
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0901eaa9517b4bc1c",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-08e21a8047ec2656e",
+            "subnet_id": "subnet-035307efa700f3732",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.private",
+            "module.private_subnets.aws_subnet.private",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0c554b92a52a0f8e8",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-08da6354908fb4d8a",
+            "subnet_id": "subnet-0d5efbcd7e4d8e941",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-006208a87be788fc8",
+            "region": "ca-central-1",
+            "route_table_id": "rtb-0aa212a30b62e2952",
+            "subnet_id": "subnet-01f40ce935f061b4a",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.private_subnets.aws_route_table.public",
+            "module.private_subnets.aws_subnet.public",
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:subnet/subnet-01685d12bb8a549c9",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ca-central-1a",
+            "availability_zone_id": "cac1-az1",
+            "cidr_block": "10.0.0.0/18",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-01685d12bb8a549c9",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "779846798556",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ca-central-1",
+            "tags": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1a",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1a",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:subnet/subnet-035307efa700f3732",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ca-central-1b",
+            "availability_zone_id": "cac1-az2",
+            "cidr_block": "10.0.64.0/18",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-035307efa700f3732",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "779846798556",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ca-central-1",
+            "tags": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1b",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-private-ca-central-1b",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "private"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.private_subnets",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:subnet/subnet-0d5efbcd7e4d8e941",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ca-central-1a",
+            "availability_zone_id": "cac1-az1",
+            "cidr_block": "10.0.128.0/18",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0d5efbcd7e4d8e941",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "779846798556",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ca-central-1",
+            "tags": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1a",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1a",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1a",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:subnet/subnet-01f40ce935f061b4a",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ca-central-1b",
+            "availability_zone_id": "cac1-az2",
+            "cidr_block": "10.0.192.0/18",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-01f40ce935f061b4a",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "779846798556",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ca-central-1",
+            "tags": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1b",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "tags_all": {
+              "AZ": "ca-central-1b",
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-subnets-public-ca-central-1b",
+              "Repository": "https://github.com/Shanav-Technologies/terraform-aws-subnet",
+              "Type": "public"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "vpc_id"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "779846798556",
+            "arn": "arn:aws:iam::779846798556:user/OpsStation1",
+            "id": "779846798556",
+            "user_id": "AIDA3LET5ZTOAEWBH5W4I"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "flow_log_cloudwatch_assume_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "vpc_flow_log_cloudwatch",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "data",
+      "type": "aws_region",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "Canada (Central)",
+            "endpoint": "ec2.ca-central-1.amazonaws.com",
+            "id": "ca-central-1",
+            "name": "ca-central-1",
+            "region": "ca-central-1"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_cloudwatch_log_group",
+      "name": "flow_log",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_default_network_acl",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:network-acl/acl-0ebd12df5bce2fee1",
+            "default_network_acl_id": "acl-0ebd12df5bce2fee1",
+            "egress": [
+              {
+                "action": "allow",
+                "cidr_block": "",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "::/0",
+                "protocol": "-1",
+                "rule_no": 101,
+                "to_port": 0
+              },
+              {
+                "action": "allow",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "id": "acl-0ebd12df5bce2fee1",
+            "ingress": [
+              {
+                "action": "allow",
+                "cidr_block": "",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "::/0",
+                "protocol": "-1",
+                "rule_no": 101,
+                "to_port": 0
+              },
+              {
+                "action": "allow",
+                "cidr_block": "0.0.0.0/0",
+                "from_port": 0,
+                "icmp_code": 0,
+                "icmp_type": 0,
+                "ipv6_cidr_block": "",
+                "protocol": "-1",
+                "rule_no": 100,
+                "to_port": 0
+              }
+            ],
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "subnet_ids": [],
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-nacl"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-nacl"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_default_route_table",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:route-table/rtb-0a84d8a3c1ed22e52",
+            "default_route_table_id": "rtb-0a84d8a3c1ed22e52",
+            "id": "rtb-0a84d8a3c1ed22e52",
+            "owner_id": "779846798556",
+            "propagating_vgws": [],
+            "region": "ca-central-1",
+            "route": [],
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-default-rt"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-default-rt"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_default_security_group",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:security-group/sg-0b1628b4db47115ff",
+            "description": "default VPC security group",
+            "egress": [],
+            "id": "sg-0b1628b4db47115ff",
+            "ingress": [],
+            "name": "default",
+            "name_prefix": "",
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "revoke_rules_on_delete": false,
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-default-sg"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-default-sg"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_egress_only_internet_gateway",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "id": "eigw-0344357ac10bb2a0b",
+            "region": "ca-central-1",
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc"
+            },
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_flow_log",
+      "name": "vpc_flow_log",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_iam_policy",
+      "name": "vpc_flow_log_cloudwatch",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "vpc_flow_log_cloudwatch",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "vpc_flow_log_cloudwatch",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:internet-gateway/igw-0bd854bd2d64cff69",
+            "id": "igw-0bd854bd2d64cff69",
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-igw"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc-igw"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-05f04e5d0ce7f8a23"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.vpc.aws_vpc.default"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_kms_alias",
+      "name": "kms-alias",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_kms_key",
+      "name": "kms",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_kms_key_policy",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "mybucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket_acl",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket_ownership_controls",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket_policy",
+      "name": "block-http",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket_public_access_block",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_s3_bucket_server_side_encryption_configuration",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ca-central-1:779846798556:vpc/vpc-05f04e5d0ce7f8a23",
+            "assign_generated_ipv6_cidr_block": true,
+            "cidr_block": "10.0.0.0/16",
+            "default_network_acl_id": "acl-0ebd12df5bce2fee1",
+            "default_route_table_id": "rtb-0a84d8a3c1ed22e52",
+            "default_security_group_id": "sg-0b1628b4db47115ff",
+            "dhcp_options_id": "dopt-03b3cea1c22abff0c",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "id": "vpc-05f04e5d0ce7f8a23",
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": "",
+            "ipv4_netmask_length": null,
+            "ipv6_association_id": "vpc-cidr-assoc-0625c601fa3c19b8c",
+            "ipv6_cidr_block": "2600:1f11:64c:6400::/56",
+            "ipv6_cidr_block_network_border_group": "ca-central-1",
+            "ipv6_ipam_pool_id": "",
+            "ipv6_netmask_length": 0,
+            "main_route_table_id": "rtb-0a84d8a3c1ed22e52",
+            "owner_id": "779846798556",
+            "region": "ca-central-1",
+            "tags": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc"
+            },
+            "tags_all": {
+              "Environment": "test",
+              "Managedby": "Shanav-Technologies",
+              "Name": "test-vpc"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "create_before_destroy": true
+        }
+      ]
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_vpc_dhcp_options",
+      "name": "vpc_dhcp",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_vpc_dhcp_options_association",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.vpc",
+      "mode": "managed",
+      "type": "aws_vpc_ipv4_cidr_block_association",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    }
+  ],
+  "check_results": null
+}
