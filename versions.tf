@@ -10,5 +10,9 @@ terraform {
       source  = "hashicorp/tls"
       version = ">= 4.0.4"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = ">= 3.5.1"
+    }
   }
 }
